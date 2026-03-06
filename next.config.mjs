@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
+const basePath = '/Under-The-Stars';
+
 const nextConfig = {
   output: 'export',
+  basePath: basePath,
+  assetPrefix: basePath,
   typescript: {
     ignoreBuildErrors: true,
   },
