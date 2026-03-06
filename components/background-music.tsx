@@ -11,7 +11,8 @@ export function BackgroundMusic() {
 
   useEffect(() => {
     // Create audio element
-    const audio = new Audio("/audio/bg-music.mp3")
+    const basePath = process.env.NODE_ENV === 'production' ? '/Under-The-Stars' : '';
+    const audio = new Audio(`${basePath}/audio/bg-music.mp3`)
     audio.loop = true
     audio.volume = 0.15 // Low volume
     audioRef.current = audio
